@@ -1,4 +1,4 @@
-# T8X dissamble plugin for rizin
+# T8X disassembly plugin
 
 Toshiba 8X dissasembly plugin for rizin
 
