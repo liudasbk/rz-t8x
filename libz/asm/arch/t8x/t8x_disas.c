@@ -2,7 +2,7 @@
 #include <string.h>
 #include <rz_lib.h>
 #include <rz_asm.h>
-#include "asm_t8x.h"
+#include "t8x.h"
 
 static int disassemble(RzAsm *a, RzAsmOp *op, const ut8 *buf, int len) {
 
