@@ -1,15 +1,28 @@
-# T8X disassembly plugin
+# T8X disassembly and analsysis plugin
 
-Toshiba 8X dissasembly plugin for rizin
+Toshiba 8X MCU were used in various Toyota ECUs in 80s - 90s.
+It is based on Motorola M68HC11, however have slightly different
+instruction set.
 
 ### Install
 
-Make sure you have rizin installed. Make uses `pkg-config` to find
-lib and header file locations.
+To build package rizin, pkg-config, ninja-build, python3 are required.
+
+Building the plugin
 
 ```bash
-make
-make install
+meson setup builddir
+cd builddir
+meson compile
+meson install
+```
+
+The plugin is installed to rizin user plugin dir.
+
+Run following command to find out user plugin dir for rizin:
+
+```bash
+rizin -H RZ_USER_PLUGINS
 ```
 
 ### Verify
@@ -18,7 +31,7 @@ Verify if plugin install was successful:
 
 ```bash
 $ rz-asm -L | grep t8x
-_d__  8          t8x         MIT     Toshiba 8X disassembly plugin
+_dA_  8          t8x         MIT     Toshiba 8X disassembly plugin
 ```
 
 ### Usage example
